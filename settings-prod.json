@@ -1,0 +1,10 @@
+{
+  "enableSlingshot": false,
+  "basicAuth": {
+    "username": "test",
+    "password": "test123"
+  },
+  "public": {
+    "disconnectTimeSec": 120
+  }
+}
