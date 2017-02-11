@@ -2,4 +2,4 @@
 
 Task for testing
 
-Meteor 1.4 / React /Sematic UI React / Griddle
+Meteor 1.4 / React / Sematic UI React / Griddle
