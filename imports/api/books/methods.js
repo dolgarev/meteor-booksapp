@@ -152,16 +152,16 @@ const booksMethods = _.pluck([
   updateBook,
   removeBook,
   resolveISBN
-], 'name');
+], 'name')
 
 if (Meteor.isServer) {
   // Only allow 5 list operations per connection per second
   DDPRateLimiter.addRule({
-    name(name) {
-      return _.contains(booksMethods, name);
+    name (name) {
+      return _.contains(booksMethods, name)
     },
 
     // Rate limit per connection ID
-    connectionId() { return true; },
-  }, 5, 1000);
+    connectionId () { return true }
+  }, 5, 1000)
 }

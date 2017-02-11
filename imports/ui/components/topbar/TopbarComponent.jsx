@@ -1,7 +1,7 @@
-import { Meteor } from "meteor/meteor"
+import { Meteor } from 'meteor/meteor'
 import { FlowRouter } from 'meteor/kadira:flow-router'
-import React, { Component } from 'react';
-import { Menu, Segment } from 'semantic-ui-react';
+import React from 'react'
+import { Menu, Segment } from 'semantic-ui-react'
 import AvatarContainer from '../avatar/AvatarContainer.jsx'
 
 const avatarItemStyle = {

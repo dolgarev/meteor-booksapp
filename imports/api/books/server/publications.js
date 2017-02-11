@@ -1,6 +1,7 @@
 import { Meteor } from 'meteor/meteor'
 import { _ } from 'meteor/underscore'
 import { check, Match } from 'meteor/check'
+import { Counts } from 'meteor/tmeasday:publish-counts'
 import Books from '../books.js'
 
 Meteor.publish('books.list', function (params) {
