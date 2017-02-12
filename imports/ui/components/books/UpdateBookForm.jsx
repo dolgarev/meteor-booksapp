@@ -25,27 +25,39 @@ export default class UpdateBookForm extends Component {
   }
 
   bookSchema = Books.schema.pick('name', 'author', 'ISBN', 'publishedDate')
-  validationContext = this.bookSchema.namedContext('AddBookForm')
+  validationContext = this.bookSchema.namedContext('UpdateBookForm')
 
-  handleSubmit = (e, { formData }) => {
-    e.preventDefault()
-
+  validateForm = formData => {
     const ctx = this.validationContext
     const cleanData = this.bookSchema.clean(formData)
 
     ctx.validate(cleanData)
 
-    if (!ctx.isValid()) {
-      const errors = _.reduce(ctx.validationErrors(), (memo, err) => {
+    const isValid = ctx.isValid()
+    let errors = {}
+
+    if (!isValid) {
+      errors = _.reduce(ctx.validationErrors(), (memo, err) => {
         memo[err.name] = ctx.keyErrorMessage(err.name)
         return memo
       }, {})
-
-      this.setState({ formErrors: errors })
-      return
     }
 
-    this.setState({ formErrors: {} })
+    return {
+      cleanData,
+      isValid,
+      errors
+    }
+  }
+
+  handleSubmit = (e, { formData }) => {
+    e.preventDefault()
+
+    const { cleanData, isValid, errors } = this.validateForm(formData)
+    this.setState({ formErrors: errors })
+
+    if (!isValid) return
+
     this.setState({ formData: cleanData })
 
     Meteor.call('books.updateBook', {
@@ -65,6 +77,7 @@ export default class UpdateBookForm extends Component {
   render() {
     const { formData, formErrors, actionResult } = this.state
     const errorMessages = _.values(formErrors)
+    const hasErrors = !!errorMessages.length
 
     let messageComponent = null
     let isDisabledSubmit = false
@@ -84,7 +97,7 @@ export default class UpdateBookForm extends Component {
     const { name, author, ISBN, publishedDate, coverUrl } = formData
 
     return (
-      <Form onSubmit={this.handleSubmit} error={!!errorMessages.length}>
+      <Form onSubmit={this.handleSubmit} error={hasErrors}>
         {messageComponent}
         <Form.Input label='Name' name='name' defaultValue={name} placeholder='Book Title' error={!!formErrors.name} />
         <Form.Input label='Author' name='author' defaultValue={author} placeholder='Author' error={!!formErrors.author} />
