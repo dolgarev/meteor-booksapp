@@ -1,13 +1,12 @@
 import { Meteor } from 'meteor/meteor'
 import { _ } from 'meteor/underscore'
 import React, { Component } from 'react'
-import { Button, Form, Input, Message } from 'semantic-ui-react'
-import SimpleSchema from 'simpl-schema'
+import { Button, Form, Message } from 'semantic-ui-react'
 import Books from '../../../api/books/books.js'
 import { MessageFailure } from './Messages.jsx'
 
 export default class UpdateBookForm extends Component {
-  constructor(props) {
+  constructor (props) {
     super(props)
 
     const book = Books.findOne({
@@ -74,7 +73,7 @@ export default class UpdateBookForm extends Component {
     })
   }
 
-  render() {
+  render () {
     const { formData, formErrors, actionResult } = this.state
     const errorMessages = _.values(formErrors)
     const hasErrors = !!errorMessages.length
@@ -87,14 +86,14 @@ export default class UpdateBookForm extends Component {
         messageComponent = (
           <MessageFailure>The book is not updated</MessageFailure>
         )
-        break;
+        break
 
       case 'success':
         isDisabledSubmit = true
-        break;
+        break
     }
 
-    const { name, author, ISBN, publishedDate, coverUrl } = formData
+    const { name, author, ISBN, publishedDate } = formData
 
     return (
       <Form onSubmit={this.handleSubmit} error={hasErrors}>

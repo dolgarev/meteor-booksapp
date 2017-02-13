@@ -22,7 +22,7 @@ export default class RemoveBookButton extends Component {
     })
   }
 
-  render() {
+  render () {
     const { modalOpen } = this.state
 
     return (

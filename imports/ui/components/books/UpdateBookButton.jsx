@@ -12,7 +12,7 @@ export default class UpdateBookButton extends Component {
   handleFailure = () => {}
   handleSuccess = () => this.handleCloseModal()
 
-  render() {
+  render () {
     const { modalOpen } = this.state
     const { bookId } = this.props
 

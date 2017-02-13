@@ -12,7 +12,7 @@ export default class AddBookButton extends Component {
   handleFailure = () => {}
   handleSuccess = () => this.handleCloseModal()
 
-  render() {
+  render () {
     const { modalOpen } = this.state
 
     return (

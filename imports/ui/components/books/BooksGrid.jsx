@@ -1,9 +1,8 @@
 import { Meteor } from 'meteor/meteor'
 import { _ } from 'meteor/underscore'
 import { Counts } from 'meteor/tmeasday:publish-counts'
-import { createContainer } from 'meteor/react-meteor-data';
+import { createContainer } from 'meteor/react-meteor-data'
 import React, { Component } from 'react'
-import { Grid } from 'semantic-ui-react'
 import Griddle from 'griddle-react'
 import Books from '../../../api/books/books.js'
 import UpdateBookButton from './UpdateBookButton.jsx'
@@ -53,7 +52,7 @@ const BooksGridComponent = props => (
     results={props.books}
     columnMetadata={columnsMetadata}
     columns={['name', 'author', 'publishedDate', '__actions']}
-    useExternal={true}
+    useExternal
     externalSetPage={props.setPageHandler}
     externalChangeSort={props.changeSortHandler}
     externalSetFilter={props.setFilterHandler}
@@ -75,7 +74,7 @@ const BooksGridContainer = createContainer(({ params }) => {
     pageSize
   })
 
-  const loading = !sub.ready();
+  const loading = !sub.ready()
 
   const options = {
     limit: pageSize
@@ -122,7 +121,7 @@ export default class BooksGrid extends Component {
     sortAscending
   })
 
-  render() {
+  render () {
     const { currentPage, sortColumn, sortAscending, pageSize } = this.state
     const params = {
       currentPage,
