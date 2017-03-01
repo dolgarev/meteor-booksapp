@@ -68,9 +68,9 @@ aldeed:schema-deny
 useraccounts:semantic-ui
 useraccounts:flow-routing
 gadicc:blaze-react-component
-semantic:ui-icon
 react-meteor-data
 edgee:slingshot
 natestrauser:animate-css
 zimme:active-route
 tmeasday:publish-counts
+mys:fonts

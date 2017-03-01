@@ -84,6 +84,7 @@ modules-runtime@0.7.8
 momentjs:moment@2.17.1
 mongo@1.1.14
 mongo-id@1.0.6
+mys:fonts@0.0.2
 natestrauser:animate-css@3.5.1
 ndxbxrme:modified@0.2.1
 nooitaf:colors@1.1.2_1
@@ -113,7 +114,6 @@ retry@1.0.9
 reywood:publish-composite@1.4.2
 rlivingston:simple-schema-mixin@1.0.0
 routepolicy@1.0.12
-semantic:ui-icon@2.1.4
 service-configuration@1.0.11
 sha@1.0.9
 simple:dev-error-overlay@1.5.1
