@@ -1,7 +1,7 @@
 import { Meteor } from 'meteor/meteor'
 import { _ } from 'meteor/underscore'
 import winston from 'winston'
-import { MongoDB } from 'winston-mongodb'
+import { MongoDB } from 'winston-mongodb' // eslint-disable-line no-unused-vars
 
 const opts = {
   db: process.env.MONGO_URL
