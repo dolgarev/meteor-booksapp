@@ -1,0 +1,11 @@
+{
+  "extensions": [
+    "ttf", "woff", "woff2"
+  ],
+  "map": {
+    "node_modules/semantic-ui-icon/assets/fonts/icons.ttf": "themes/default/assets/fonts/icons.ttf",
+    "node_modules/semantic-ui-icon/assets/fonts/icons.woff": "themes/default/assets/fonts/icons.woff",
+    "node_modules/semantic-ui-icon/assets/fonts/icons.woff2": "themes/default/assets/fonts/icons.woff2"
+  },
+  "verbose": true
+}
