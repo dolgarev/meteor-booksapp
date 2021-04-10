@@ -17,30 +17,30 @@
     ]
   },
   "dependencies": {
-    "babel-plugin-transform-class-properties": "^6.22.0",
-    "babel-runtime": "^6.18.0",
-    "bcrypt": "^1.0.2",
-    "dot-object": "^1.5.4",
-    "griddle-react": "^0.7.1",
-    "isbn-utils": "^1.1.0",
+    "babel-plugin-transform-class-properties": "6.22.0",
+    "babel-runtime": "6.18.0",
+    "bcrypt": "1.0.2",
+    "dot-object": "1.5.4",
+    "griddle-react": "0.7.1",
+    "isbn-utils": "1.1.0",
     "meteor-node-stubs": "~0.2.3",
-    "node-isbn": "^1.2.0",
-    "noty": "^2.4.0",
-    "pretty-hrtime": "^1.0.3",
-    "react": "^15.4.2",
-    "react-addons-pure-render-mixin": "^15.4.2",
-    "react-dom": "^15.4.2",
-    "react-mounter": "^1.2.0",
-    "react-tap-event-plugin": "^2.0.1",
-    "semantic-ui-css": "^2.2.4",
-    "semantic-ui-icon": "^2.2.9",
-    "semantic-ui-react": "^0.64.7",
-    "simpl-schema": "^0.1.1",
-    "winston": "^2.3.1",
-    "winston-mongodb": "^2.0.7"
+    "node-isbn": "1.2.0",
+    "noty": "2.4.0",
+    "pretty-hrtime": "1.0.3",
+    "react": "15.4.2",
+    "react-addons-pure-render-mixin": "15.4.2",
+    "react-dom": "15.4.2",
+    "react-mounter": "1.2.0",
+    "react-tap-event-plugin": "2.0.1",
+    "semantic-ui-css": "2.2.4",
+    "semantic-ui-icon": "2.2.9",
+    "semantic-ui-react": "0.64.7",
+    "simpl-schema": "0.1.1",
+    "winston": "2.3.1",
+    "winston-mongodb": "2.0.7"
   },
   "devDependencies": {
-    "babel-eslint": "^7.1.1",
-    "standard": "^9.0.0-beta.0"
+    "babel-eslint": "7.1.1",
+    "standard": "9.0.0-beta.0"
   }
 }
